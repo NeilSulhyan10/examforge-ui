@@ -86,7 +86,8 @@ const Upload = () => {
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-foreground mb-2">Upload Questions</h1>
             <p className="text-muted-foreground">
-              Upload PDF or Excel files containing exam questions. Our AI will convert them to structured format.
+              Upload your PDF file. Our System  will convert them to structured
+              Json format and Your test will be generated.
             </p>
           </div>
 
@@ -97,7 +98,7 @@ const Upload = () => {
                 <CardHeader>
                   <CardTitle>Upload Files</CardTitle>
                   <CardDescription>
-                    Supported formats: PDF, Excel (.xlsx, .xls)
+                    Supported format: PDF
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -116,7 +117,7 @@ const Upload = () => {
                     <Input
                       type="file"
                       multiple
-                      accept=".pdf,.xlsx,.xls"
+                      accept=".pdf"
                       onChange={handleFileSelect}
                       className="hidden"
                       id="file-upload"
@@ -212,13 +213,7 @@ const Upload = () => {
                         <p className="text-xs text-muted-foreground">Clear text, well-structured questions</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Badge variant="secondary" className="mt-0.5">Excel</Badge>
-                      <div>
-                        <p className="text-sm font-medium">Excel Format</p>
-                        <p className="text-xs text-muted-foreground">One question per row, options in columns</p>
-                      </div>
-                    </div>
+                    
                   </div>
                 </CardContent>
               </Card>
@@ -232,7 +227,7 @@ const Upload = () => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="text-sm space-y-2">
-                    <p>• AI extracts questions and options</p>
+                    <p>• System extracts questions and options</p>
                     <p>• Converts to structured JSON format</p>
                     <p>• Validates question format</p>
                     <p>• Processing takes 1-3 minutes</p>
