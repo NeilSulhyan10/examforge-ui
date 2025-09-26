@@ -19,7 +19,6 @@ const Dashboard = () => {
     { label: "Total Exams", value: "24", icon: FileText, color: "text-primary" },
     { label: "Active Tests", value: "8", icon: Clock, color: "text-warning" },
     { label: "Completed", value: "16", icon: CheckCircle, color: "text-success" },
-    { label: "Test Takers", value: "156", icon: Users, color: "text-accent-foreground" },
   ];
 
   const recentExams = [
@@ -46,7 +45,7 @@ const Dashboard = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (

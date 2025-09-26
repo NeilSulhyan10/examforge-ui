@@ -86,7 +86,8 @@ const TakeExam = () => {
 
   const handleSubmitExam = () => {
     // Navigate to results page
-    navigate('/results');
+    alert("Exam submitted!");
+    navigate('/');
   };
 
   const currentQ = exam.questions[currentQuestion];
